@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+#button2{
+
+display: none;
+
+}
+
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+
+
+$("#button2").click(function(){
+
+    $("#div1").fadeOut(3000);
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut();
+  });
+
+});
+
+</script>
+</head>
+<body>
+
+
+
+<button id="bu" >Tryck för att få in boxar </button><br><br>
+<button id="button2"></button>
+
+<script> 
+
+  document.getElementById("bu").addEventListener("click", function(){
+    
+    document.getElementById("button2").innerHTML="klicka ";
+
+    $("#button2").show();
+
+  });
+</script>
+
+
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(0, 255, 247);"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:rgb(0, 73, 128);"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+</body>
+</html>

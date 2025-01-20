@@ -1,3 +1,43 @@
+
+#container{
+    height: 2500px;
+    display: grid;
+    grid-template-columns: 32% 32% 32% ;
+    grid-template-rows: 10% 10% 10% 8% ;
+
+    grid-template-areas: 
+    
+        " . he . "
+        " . . . "
+        " . . . "
+        " . . . "
+    
+    ;
+
+}
+
+header{
+    grid-area: he;
+    text-align: center;
+    background-color:grey;
+    
+
+}
+
+h1{
+
+    font-size: 40px;
+    margin-bottom: 0px;
+    font-style: italic;
+    text-align: center;
+    
+
+}
+
+
+
+
+
 #wrapper{
     height: 2500px;
     display: grid;
@@ -14,61 +54,150 @@
     ;
 
 }
+
 header{
-    
-    background-color: green;
+
     grid-area: he;
+    text-align: center;
+    background-color:grey;
+
+
+}
+
+
+header h1{
     
+    font-size: 40px;
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+h2{
+
+font-size: 20px;
+font-style: italic;
+}
+
+h3{
+
+font-size: 17px;
+font-style: oblique;
+
+
 }
 
 
 #s1{
  
-    background-color: aqua;
+    background-color: gray;
     grid-area: s1;
-    margin-top: 10px;
-    }
-#s2{
     
-    background-color: black;
-    grid-area: s2;
-    margin-top: 10px;
+
+    }
+
+#s1 h1 {
+
+text-align: center;
+font-style: italic;
+
 
 }
+
+#s1 h2{
+    
+font-size: 18px;
+font-style: oblique;
+
+}
+
+
+
+#s2{
+    
+    background-color: grey  ;
+    grid-area: s2;
+   
+
+}
+
+
+#s2 h1{
+
+    text-align: center;
+    font-style: italic;
+
+
+}
+
+#s2 h2{
+
+    font-size: 18px;
+    font-style: oblique;    
+
+
+}
+
+#s2 h3{
+
+    font-size: 18px;
+    font-style: oblique;    
+    
+
+}
+
 
 footer{
   
-    background-color: blueviolet;
+    background-color:gray;
     grid-area: fo;
-    margin-top: 10px;
+    
 
 
 }
+
+footer h1{
+    font-style: italic;
+}
+
+footer h2{
+
+    font-size: 18px;
+    font-style: oblique;
+}
+
+footer h4{
+    font-style: oblique;
+
+
+
+
+}
+
 
 #a1{
 
 
 grid-area: a1;
-background-color: cyan;
-margin-left: 10px;
+background-color:grey;
+
 }
 
 #a2{
 
    
     grid-area: a2;
-    background-color: bisque;
-    margin-top: 10px;
-    margin-left: 10px;
+    background-color: grey;
+    
+    background-image: couver;
     }
 
     #a3{
 
      
         grid-area: a3;
-        background-color: chartreuse;
-        margin-top: 10px;
-        margin-left: 10px;
+        background-color: greenyellow;
+        
         }
         
     
+       
