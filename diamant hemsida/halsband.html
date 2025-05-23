@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamanter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-left">
+                <button id="menuButton" type="button" class="menu-button" aria-labelledby="menuButtonLabel">
+                    <span class="menu-button__line">
+                        <span id="menuButtonLabel" style="display: none">Menu Button</span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="logo">
+                <img src="images/diamant-removebg-preview.png" alt="Diamant logotyp">
+            </div>
+            <div class="cart-icon">&#128722;</div>
+        </nav>
+        <div id="panel">
+            <a href="index.html">Ringar</a>
+            <a href="">Örhängen</a>
+            <a href="">Armband</a>
+            <a href="">Klockor</a>
+        </div>
+    </header>
+
+    <div class="main-heading-container">
+        <h1>Halsband</h1>
+    </div>
+
+    <main class="grid-container">
+
+        <div class="grid-item">
+            <div class="container">
+                <img src="images.halsand/genomskinligdiamant.jpg" alt="Genomskinlig diamant halsand " class="cut-image site-img">
+                <div class="hide-img-overlay description">300 000Kr </div>
+            </div>
+            <span class="pris">300 000Kr</span>
+            <p> Genomskinlig diamant halsband
+            </p>
+        </div>
+
+        <div class="grid-item">
+            <div class="container">
+                <img src="images.halsand/grönthalsband.jpg" alt="grönt diamant halsband " class="cut-image site-img">
+                <div class="hide-img-overlay description">25 000 Kr </div>
+            </div>
+            <span class="pris">25 000Kr</span>
+            <p>Grönt Diamant haslbant</p>
+        </div>
+
+        <div class="grid-item">
+            <div class="container">
+                <img src="images.halsand/rötthalsband.jpg" alt="Rött diamant halsband" class="cut-image site-img">
+                <div class="hide-img-overlay description">199 000 Kr </div>
+            </div>
+            <span class="pris">199 000Kr</span>
+            <p>Rött Diamant halsband</p>
+        </div>
+
+        <div class="grid-item">
+            <div class="container">
+                <img src="images.halsand/blåhalsband.jpg" alt="Blå diamant halsband " class="cut-image site-img ">
+                <div class="hide-img-overlay description">90 000 Kr </div>
+            </div>
+            <span class="pris">90 000kr</span>
+            <p>Blå diamant halsband</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Om oss</h4>
+                <ul>
+                    <li><a href="#">Vår historia</a></li>
+                    <li><a href="#">Vårt team</a></li>
+                    <li><a href="#">Värderingar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="mailto:info@exempel.se">info@VåraDiamanter.se</a></li>
+                    <li><a href="#">Telefon: 0123-456789</a></li>
+                    <li><a href="#">Hitta oss</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Följ oss</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Nyhetsbrev</h4>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Din e-postadress" required>
+                    <button type="submit">Prenumerera</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Våra Diamanter. Alla rättigheter reserverade.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // Get the menu button element
+        const menuButton = document.getElementById("menuButton");
+        // State variable to track if the menu is open
+        let isMenuOpened = false; // Initial state: menu is closed
+
+        // Function to toggle the menu's visibility and button icon
+        function toggleMenu() {
+            isMenuOpened = !isMenuOpened; // Toggle the state
+            if (isMenuOpened) {
+                // If menu is opened, add 'is-opened' class to change button icon to 'x'
+                menuButton.classList.add("is-opened");
+                // Slide down the panel to show it
+                $("#panel").slideDown("slow");
+            } else {
+                // If menu is closed, remove 'is-opened' class to change button icon back to stripes
+                menuButton.classList.remove("is-opened");
+                // Slide up the panel to hide it
+                $("#panel").slideUp("slow");
+            }
+        }
+
+        // Add click event listener to the menu button
+        menuButton.addEventListener("click", toggleMenu);
+
+        // Hide elements with class 'pris' initially (prices)
+        $('.pris').hide();
+
+        // Get all elements with class 'site-img' (product images)
+        const imgs = document.querySelectorAll(".site-img");
+
+        // Add mouseover event listener to each image
+        imgs.forEach((img) => {
+            img.addEventListener("mouseover", (e) => {
+                // Find the description overlay and change its class to show it
+                const captionElement = e.target.parentElement.children[1];
+                captionElement.className = "show-img-overlay";
+            });
+        });
+
+        // Add mouseleave event listener to each image
+        imgs.forEach((img) => {
+            img.addEventListener("mouseleave", (e) => {
+                // Find the description overlay and change its class to hide it
+                const captionElement = e.target.parentElement.children[1];
+                captionElement.className = "hide-img-overlay";
+            });
+        });
+    </script>
+</body>
+</html>
