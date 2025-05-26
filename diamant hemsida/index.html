@@ -16,6 +16,7 @@
                         <span id="menuButtonLabel" style="display: none">Menu Button</span>
                     </span>
                 </button>
+                <body class="no-js"></body>
             </div>
 
             <div class="logo">
@@ -115,7 +116,7 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 Våra Diamanter. Alla rättigheter reserverade.</p>
-        </div>
+        </div> 
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -139,6 +140,9 @@
                 // Slide up the panel to hide it
                 $("#panel").slideUp("slow");
             }
+            // Ta bort 'no-js' klassen och lägg till 'js-enabled' när JavaScript laddas
+    document.body.classList.remove('no-js');
+    document.body.classList.add('js-enabled');
         }
 
         // Add click event listener to the menu button

@@ -70,6 +70,13 @@ body {
 .menu-button.is-opened::after {
     transform: translateY(-8px) rotate(-45deg);
 }
+.menu-button {
+    display: none;
+}
+
+.js-enabled .menu-button {
+    display: block;     
+}
 
 
 #panel {
