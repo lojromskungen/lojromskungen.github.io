@@ -44,7 +44,7 @@ body {
     z-index: 10;
 }
 .sprite {
-    background-image: url(images/spritesheet1.png);
+    background-image: url(images.halsand/spritesheet1.png);
     background-repeat: no-repeat;
     display: block;
 }

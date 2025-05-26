@@ -102,6 +102,30 @@ body {
     margin-top: 1rem; 
     width: 100%; 
 }
+.sprite {
+    background-image: url(images.halsand/spritesheet1.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Namnl_s-png-5050 {
+    width: 50px;
+    height: 50px;
+    background-position: -5px -5px;
+}
+
+.sprite-facebook-5050 {
+    width: 50px;
+    height: 50px;
+    background-position: -65px -5px;
+}
+
+.sprite-twitter-5050 {
+    width: 50px;
+    height: 50px;
+    background-position: -5px -65px;
+}
+
 
 
 h1 {
